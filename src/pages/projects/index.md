@@ -121,36 +121,5 @@ projects:
           https://res.cloudinary.com/ekuwol/image/upload/v1558026217/streets/the-streets-of-edinburgh-1003295.jpg
         title: Edinburgh Street
     title: streets
-  - cover: >-
-      https://res.cloudinary.com/ekuwol/video/upload/v1558025335/volcanoes/volcano.mp4
-    pieces:
-      - description: >-
-          Semeru, or Mount Semeru (Indonesian: Gunung Semeru), is an active
-          volcano in East Java, Indonesia. It is located in the subduction zone,
-          where the Indo-Australia plate gets under the Eurasia plate. It is the
-          highest mountain on the island of Java. This stratovolcano is also
-          known as Mahameru, meaning 'The Great Mountain.
-
-
-          The name derived from the Hindu-Buddhist mythical mountain of Meru or
-          Sumeru, the abode of gods.
-        media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1558026250/volcanoes/mahameru-volcano.jpg
-        title: Mahameru
-      - description: >-
-          A nice bit of text for each piece will help a lot with testing. A nice
-          bit of text for each piece will help a lot with testing. A nice bit of
-          text for each piece will help a lot with testing. A nice bit of text
-          for each piece will help a lot with testing.
-        media: /img/volcanoes-2.jpg
-        title: Plume
-      - description: >-
-          A nice bit of text for each piece will help a lot with testing. A nice
-          bit of text for each piece will help a lot with testing. A nice bit of
-          text for each piece will help a lot with testing. A nice bit of text
-          for each piece will help a lot with testing.
-        media: /img/shutterstock_569669356.jpg
-        title: Lava Flow
-    title: volcanoes
 ---
 
