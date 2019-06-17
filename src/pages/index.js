@@ -36,7 +36,6 @@ export const pageQuery = graphql`
               poster,
               pieces {
                 title,
-                description,
                 media,
                 poster
               }
