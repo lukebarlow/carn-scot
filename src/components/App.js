@@ -358,8 +358,9 @@ export default class App extends React.Component {
       
       <MediaQuery minWidth={768}>
         <NavigationLinks
+          showHome={pieceIndex !== 0}
           selected={ showInfo ? 'info' : projectIndex }
-          isWhite={captionPieceIndex===0 && !showInfo} 
+          isWhite={!showInfo} 
           projects={projects} 
           onLink={this.handleLink} 
         />
