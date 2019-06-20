@@ -11,7 +11,7 @@ import { portraitSelector, landscapeSelector } from '../mediaSelectors.js'
 const StyledDiv = styled.div`
   height: 100vh;
   padding-left: 200px;
-  padding-top: 40px;
+  padding-top: 60px;
 
   @media ${portraitSelector} {
     padding-left: 5px;
@@ -27,20 +27,20 @@ const StyledDiv = styled.div`
 const StyledImg = styled.img`
   display: block;
   width: auto;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 120px);
   cursor: pointer;
   
   @media ${portraitSelector} {
     max-width: calc(100vw - 10px);
     max-height: calc(100vh - 20px);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 120px);
     width: 100%;
     object-fit: contain;
   }
 
   @media ${landscapeSelector} {
     width: auto;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 60px);
   }
 
 `
@@ -48,13 +48,13 @@ const StyledImg = styled.img`
 const StyledVideo = styled.video`
   display: block;
   width: auto;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 120px);
   cursor: pointer;
 
   @media ${portraitSelector} {
     max-width: calc(100vw - 10px);
     max-height: calc(100vh - 20px);
-    height: calc(100vh - 160px);
+    height: calc(100vh - 120px);
     width: 100%;
     object-fit: contain;
   }
@@ -108,12 +108,12 @@ export default class Piece extends React.Component {
       { this.shouldLoadContent ?
         <>
           { type === 'IMAGE' &&
-            <StyledImg src={transformCloudinaryUrl(piece.media, imgHeight)} onLoad={onImageLoad} />
+            <StyledImg src={transformCloudinaryUrl(piece.media, imgHeight * 2)} onLoad={onImageLoad} />
           }
           { type === 'VIDEO' && 
             <StyledVideo
-              src={transformCloudinaryUrl(piece.media, imgHeight)}
-              poster={transformCloudinaryUrl(piece.poster, imgHeight)}
+              src={transformCloudinaryUrl(piece.media, imgHeight * 2)}
+              poster={transformCloudinaryUrl(piece.poster, imgHeight * 2)}
               muted
               autoPlay
               loop
@@ -123,7 +123,7 @@ export default class Piece extends React.Component {
           { type === 'AUDIO' && 
             <AudioPlayer
               audioSrc={piece.media}
-              imgSrc={transformCloudinaryUrl(piece.poster, imgHeight)}
+              imgSrc={transformCloudinaryUrl(piece.poster, imgHeight * 2)}
             />
           }
         </> : <StyledImg src='img/grey-square.gif' onLoad={onImageLoad} />
