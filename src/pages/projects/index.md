@@ -29,6 +29,6 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/P1030012crop_wrvohp.jpg
     poster: ''
-    title: Chimenea
+    title: Carn Kitchen
 ---
 
