@@ -16,6 +16,8 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/detail_2_g210rs.jpg
       - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave3_cnqmzo.jpg
+      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526563/chimenea/3304_detail_1_fgmkah.jpg
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/3444_pizza_1_owfu0r.jpg
