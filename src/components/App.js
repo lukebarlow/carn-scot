@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import scroll from 'scroll'
 import Markdown from 'react-markdown'
@@ -339,6 +340,24 @@ export default class App extends React.Component {
     }
 
     return <>
+
+      <Helmet>
+        <html lang="en" />
+        <title>Carn Kitchen</title>
+        <meta name="description" content="outdoor living in style" />
+ 
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+        <link rel="icon" type="image/gif" href="/img/carn-logo-white-square.gif" />
+
+        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
+        <meta name="theme-color" content="#fff" />
+
+        <meta property="og:type" content="business.business" />
+        <meta property="og:title" content='Carn' />
+        <meta property="og:url" content="/" />
+        <meta property="og:image" content="/img/og-image.jpg" />
+      </Helmet>
+
       <ProjectContainer ref={this.handleRef}>
         { projects.map((p, i) => <Project 
           key={i} 

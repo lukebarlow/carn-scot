@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children }) => (
       <div>
         <Helmet>
           <html lang="en" />
-          <title>{data.site.siteMetadata.title}</title>
+          <title>Carn</title>
           <meta name="description" content={data.site.siteMetadata.description} />
           
           <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
@@ -32,7 +32,7 @@ const TemplateWrapper = ({ children }) => (
 	        <meta name="theme-color" content="#fff" />
 
 	        <meta property="og:type" content="business.business" />
-          <meta property="og:title" content={data.site.siteMetadata.title} />
+          <meta property="og:title" content='Carn' />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>

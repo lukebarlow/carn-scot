@@ -37,6 +37,7 @@ const ProjectArrow = styled.div`
 
 const ProjectTitle = styled.h1`
   position: relative;
+  line-height: 0.9;
   top: -0.1em;
   width: 100%;
   margin: 0;
@@ -113,7 +114,8 @@ export default ({ project, isCurrent = false, pieceIndex, onPieceClick, onImageL
         }
       </ProjectVideoWrapper>
       <ProjectTitle iam='project-title'>
-        {project.title}
+        {project.title}<br />
+        <span style={{fontSize: '60%'}}>outdoor living in style</span>
         <MediaQuery minWidth={768}>
           <ProjectArrow>
             <img alt="" src="/img/arrow.svg" />

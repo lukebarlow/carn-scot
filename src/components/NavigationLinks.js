@@ -39,7 +39,15 @@ export default ({projects, showHome, onLink, isWhite, selected}) => {
     {/* <Bar isWhite={isWhite}>
       { projects.map((p, i) => <NavSpan onClick={() => onLink(i)} key={i} selected={parseInt(selected)===i} project={p}>{p.title}</NavSpan>)}
     </Bar> */}
-    { showHome && <Bar isWhite={isWhite}><NavSpan onClick={() => onLink(0)}>home</NavSpan></Bar> }
+    <Bar isWhite={isWhite}>
+      <NavSpan onClick={() => onLink(0)}>
+        <img 
+          src={ isWhite ? 'img/carn-logo.gif' : 'img/carn-logo-black.gif'} 
+          height='40' 
+          style={{position: 'relative', top: '-10px'}} 
+        />
+      </NavSpan>
+    </Bar>
     <InfoSpan isWhite={isWhite} onClick={() => onLink('info')} selected={selected==='info'}>{ isWhite ? 'info' : 'close'}</InfoSpan>
   </>
 }
