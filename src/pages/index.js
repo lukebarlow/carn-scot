@@ -33,11 +33,9 @@ export const pageQuery = graphql`
             projects {
               title
               cover,
-              poster,
               pieces {
                 title,
-                media,
-                poster
+                media
               }
             }
           }
