@@ -7,14 +7,14 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
       - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/crop2_dhzk1i.jpg
+      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave1_ga9adt.jpg
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030043_kibfti.jpg
         title: close up
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/detail_2_g210rs.jpg
-      - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/P1030012crop_wrvohp.jpg
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030038_ruysiu.jpg
       - media: >-
@@ -24,6 +24,8 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526572/chimenea/seat1_joiym5.jpg
         title: seat
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/P1030012crop_wrvohp.jpg
     poster: ''
     title: Chimenea
 ---
