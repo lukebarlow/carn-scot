@@ -5,10 +5,6 @@ projects:
       https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/crop2_dhzk1i.jpg
     pieces:
       - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526572/chimenea/P1030041_xu9wdr.jpg
-        poster: ''
-        title: electric box
-      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526572/chimenea/seat1_joiym5.jpg
         title: seat
       - media: >-

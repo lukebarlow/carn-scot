@@ -346,24 +346,24 @@ export default class App extends React.Component {
           onImageLoad={this.handleImageLoad}
         />)}
       </ProjectContainer>
-      <Caption 
+      {/* <Caption 
         onMove={onMove} 
         index={captionPieceIndex} 
         count={pieces.length} 
         piece={piece} 
-      />
+      /> */}
       <Info visible={showInfo}>
         <Markdown source={info} />
       </Info>
       
-      <MediaQuery minWidth={768}>
+      {/* <MediaQuery minWidth={768}>
         <NavigationLinks
           selected={ showInfo ? 'info' : projectIndex }
           isWhite={captionPieceIndex===0 && !showInfo} 
           projects={projects} 
           onLink={this.handleLink} 
         />
-      </MediaQuery>
+      </MediaQuery> */}
     </>
   }
 }
