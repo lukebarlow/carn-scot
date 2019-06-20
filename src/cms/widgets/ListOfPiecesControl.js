@@ -267,7 +267,7 @@ export default class ListControl extends React.Component {
 
     let media = item.get('media')
     if (media) {
-      return <MediaThumbnail src={media} poster={item.get('poster')} height={50} />
+      return <MediaThumbnail src={media} poster={item.get('poster')} height={150} />
     }
 
     return (value || `No ${labelField.get('name')}`).toString();
