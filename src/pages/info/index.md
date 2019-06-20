@@ -17,6 +17,6 @@ The Chimenea oven is ideal for cooking as a grill or oven, as well as giving atm
 
 The seat is available in different styles and can be cantilevered left or right depending on layout.
 
-The lamp and table assembly can feature an electrical socket for charger your speaker or phone, and provides work and storage space for you refreshments.
+The lamp and table assembly can feature an electrical socket for charging your speaker or phone, and provides work and storage space for you refreshments.
 
 Get in touch with sam@carn.scot (tel: 07786 273901) to discuss your requirements.
