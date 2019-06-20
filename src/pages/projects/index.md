@@ -23,6 +23,26 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526570/chimenea/vistaprint_flyer_front_yov6ti.jpg
         title: flyer front
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526569/chimenea/isometric_gte9i6.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave3_cnqmzo.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave1_ga9adt.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/P1030012crop_wrvohp.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave2_rp2ozj.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526563/chimenea/3304_detail_1_fgmkah.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/3444_pizza_1_owfu0r.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/detail_2_g210rs.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526561/chimenea/day_4_i8w5yf.jpg
     poster: ''
     title: Chimenea
 ---
