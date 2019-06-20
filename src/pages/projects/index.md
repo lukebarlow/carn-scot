@@ -5,6 +5,8 @@ projects:
       https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/crop2_dhzk1i.jpg
     pieces:
       - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave1_ga9adt.jpg
+      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/P1030012crop_wrvohp.jpg
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030043_kibfti.jpg
