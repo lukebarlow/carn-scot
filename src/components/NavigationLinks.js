@@ -36,9 +36,9 @@ const InfoSpan = styled.span`
 
 export default ({projects, onLink, isWhite, selected}) => {
   return <>
-    <Bar isWhite={isWhite}>
+    {/* <Bar isWhite={isWhite}>
       { projects.map((p, i) => <NavSpan onClick={() => onLink(i)} key={i} selected={parseInt(selected)===i} project={p}>{p.title}</NavSpan>)}
-    </Bar>
-    <InfoSpan isWhite={isWhite} onClick={() => onLink('info')} selected={selected==='info'}>info</InfoSpan>
+    </Bar> */}
+    <InfoSpan isWhite={true} onClick={() => onLink('info')} selected={selected==='info'}>info</InfoSpan>
   </>
 }

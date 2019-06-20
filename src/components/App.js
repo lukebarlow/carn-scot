@@ -356,14 +356,14 @@ export default class App extends React.Component {
         <Markdown source={info} />
       </Info>
       
-      {/* <MediaQuery minWidth={768}>
+      <MediaQuery minWidth={768}>
         <NavigationLinks
           selected={ showInfo ? 'info' : projectIndex }
           isWhite={captionPieceIndex===0 && !showInfo} 
           projects={projects} 
           onLink={this.handleLink} 
         />
-      </MediaQuery> */}
+      </MediaQuery>
     </>
   }
 }
