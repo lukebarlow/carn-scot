@@ -16,8 +16,6 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
       - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526561/chimenea/day_4_i8w5yf.jpg
-      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526572/chimenea/seat1_joiym5.jpg
         title: seat
     poster: ''
