@@ -3,11 +3,10 @@ import styled from 'styled-components'
 import scroll from 'scroll'
 import Markdown from 'react-markdown'
 import MediaQuery from 'react-responsive'
-
 import History from 'hash-history'
-
 import NavigationLinks from './NavigationLinks'
-import Caption from './Caption'
+
+import transformCloudinaryUrl from '../common/transformCloudinaryUrl.js'
 import '../styles/App.css'
 
 import Project from './Project'
@@ -290,6 +289,8 @@ export default class App extends React.Component {
 
     if (link === 'info') {
       this.setState({ showInfo: !this.state.showInfo })
+    } else {
+      this.setState({ showInfo: false })
     }
 
     link = parseInt(link)
@@ -316,7 +317,9 @@ export default class App extends React.Component {
     if (pieces.length > pieceIndex) {
       this.right()
     } else if (projects.length > projectIndex - 1) {
-      this.down()
+      // this.down()
+      this.setStateAndHistory({ pieceIndex: 0 })
+      this.horizontalScroll(0)
     }
   }
 
@@ -353,7 +356,14 @@ export default class App extends React.Component {
         piece={piece} 
       /> */}
       <Info visible={showInfo}>
-        <Markdown source={info} />
+        <MediaQuery minWidth={768}>
+          <img
+            style={{float: 'right', paddingTop: '65px', margin: '15px'}} 
+            src={transformCloudinaryUrl('https://res.cloudinary.com/ekuwol/image/upload/v1560526569/chimenea/isometric_gte9i6.jpg', 350)} />
+        </MediaQuery>
+        <div style={{maxWidth: '600px'}}>
+          <Markdown source={info} />
+        </div>
       </Info>
       
       <MediaQuery minWidth={768}>
