@@ -10,8 +10,8 @@ import { portraitSelector, landscapeSelector } from '../mediaSelectors.js'
 
 const StyledDiv = styled.div`
   height: 100vh;
-  padding-left: 150px;
-  padding-top: 80px;
+  padding-left: 200px;
+  padding-top: 40px;
 
   @media ${portraitSelector} {
     padding-left: 5px;
@@ -27,20 +27,20 @@ const StyledDiv = styled.div`
 const StyledImg = styled.img`
   display: block;
   width: auto;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 80px);
   cursor: pointer;
   
   @media ${portraitSelector} {
     max-width: calc(100vw - 10px);
     max-height: calc(100vh - 20px);
-    height: calc(100vh - 160px);
+    height: calc(100vh - 80px);
     width: 100%;
     object-fit: contain;
   }
 
   @media ${landscapeSelector} {
     width: auto;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 20px);
   }
 
 `

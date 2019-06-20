@@ -2,12 +2,7 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 
-import {
-  ProjectLandingScreen,
-  ProjectTitle,
-  ProjectVideoWrapper,
-} from '../styles/elements.js'
-
+import { smallScreenSelector } from '../mediaSelectors'
 import fileType from '../common/fileType.js'
 import Piece from './Piece.js'
 
@@ -37,6 +32,49 @@ const ProjectArrow = styled.div`
     display: block;
     width: auto;
     height: 32px;
+  }
+`
+
+const ProjectTitle = styled.h1`
+  position: relative;
+  top: -0.1em;
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-size: 64px;
+  font-weight: normal;
+  text-align: center;
+`
+
+const ProjectLandingScreen = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  background-image: url(${props => props.backgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+`
+
+const ProjectVideoWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
   }
 `
 
@@ -74,7 +112,7 @@ export default ({ project, isCurrent = false, pieceIndex, onPieceClick, onImageL
           />
         }
       </ProjectVideoWrapper>
-      <ProjectTitle>
+      <ProjectTitle iam='project-title'>
         {project.title}
         <MediaQuery minWidth={768}>
           <ProjectArrow>
