@@ -14,10 +14,10 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/3444_pizza_1_owfu0r.jpg
       - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
-      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526572/chimenea/seat1_joiym5.jpg
         title: seat
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
     poster: ''
     title: Chimenea
 ---
