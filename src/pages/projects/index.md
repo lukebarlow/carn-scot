@@ -14,15 +14,10 @@ projects:
           https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030038_ruysiu.jpg
         title: all three
       - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526570/chimenea/vistaprint_flyer_back_sobz6n.jpg
-        title: flyer inside
-      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526570/chimenea/vistaprint_flyer_front_yov6ti.jpg
         title: flyer front
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
-      - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526569/chimenea/isometric_gte9i6.jpg
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave3_cnqmzo.jpg
       - media: >-
