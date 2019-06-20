@@ -7,9 +7,9 @@ projects:
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
       - media: >-
-          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/crop2_dhzk1i.jpg
-      - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave1_ga9adt.jpg
+      - media: >-
+          https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/crop2_dhzk1i.jpg
       - media: >-
           https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030043_kibfti.jpg
         title: close up
