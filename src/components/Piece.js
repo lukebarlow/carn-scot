@@ -15,32 +15,32 @@ const StyledDiv = styled.div`
 
   @media ${portraitSelector} {
     padding-left: 5px;
-    padding-top: 5px;
+    padding-top: 80px;
   }
 
   @media ${landscapeSelector} {
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 60px;
   }
 `
 
 const StyledImg = styled.img`
   display: block;
   width: auto;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 80px);
   cursor: pointer;
   
   @media ${portraitSelector} {
     max-width: calc(100vw - 10px);
-    max-height: calc(100vh - 20px);
-    height: calc(100vh - 120px);
+    max-height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
     width: 100%;
     object-fit: contain;
   }
 
   @media ${landscapeSelector} {
     width: auto;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
   }
 
 `

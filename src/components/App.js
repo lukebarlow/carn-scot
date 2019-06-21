@@ -7,6 +7,7 @@ import MediaQuery from 'react-responsive'
 import History from 'hash-history'
 import NavigationLinks from './NavigationLinks'
 
+import { smallScreenSelector } from '../mediaSelectors.js'
 import transformCloudinaryUrl from '../common/transformCloudinaryUrl.js'
 import '../styles/App.css'
 
@@ -29,6 +30,11 @@ const Info = styled.div`
   padding-left: 150px;
   padding-right: 150px;
   visibility: ${({visible}) => visible ? 'visible' : 'hidden'}
+
+  @media ${smallScreenSelector} {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `
 
 const scrollTriggerThreshold = 51
@@ -331,9 +337,6 @@ export default class App extends React.Component {
   render () {
     const { projects, info } = this.props
     const { projectIndex, pieceIndex, captionPieceIndex, showInfo } = this.state
-    const pieces = projects[projectIndex].pieces
-
-    const piece = captionPieceIndex > 0 ? pieces[captionPieceIndex - 1] : null
 
     const onMove = (by) => {
       by === -1 ? this.left() : this.right()
@@ -379,21 +382,23 @@ export default class App extends React.Component {
           <img
             style={{float: 'right', paddingTop: '65px', margin: '15px'}} 
             src={transformCloudinaryUrl('https://res.cloudinary.com/ekuwol/image/upload/v1560526569/chimenea/isometric_gte9i6.jpg', 350)} />
+        
         </MediaQuery>
+        
         <div style={{maxWidth: '600px'}}>
           <Markdown source={info} />
         </div>
+        <div style={{backgroundColor: 'rgba(255, 255, 255, 0.8)', height: '80px', position: 'absolute', top:'0px', width: '100%'}}>&nbsp;</div>
       </Info>
       
-      <MediaQuery minWidth={768}>
-        <NavigationLinks
-          showHome={pieceIndex !== 0}
-          selected={ showInfo ? 'info' : projectIndex }
-          isWhite={!showInfo} 
-          projects={projects} 
-          onLink={this.handleLink} 
-        />
-      </MediaQuery>
+      <NavigationLinks
+        showHome={pieceIndex !== 0}
+        selected={ showInfo ? 'info' : projectIndex }
+        isWhite={!showInfo} 
+        projects={projects} 
+        onLink={this.handleLink} 
+      />
+      
     </>
   }
 }
