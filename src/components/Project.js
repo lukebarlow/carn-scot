@@ -67,6 +67,7 @@ const ProjectVideoWrapper = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: black;
 
   video {
     position: absolute;
@@ -86,6 +87,7 @@ const StyledImg = styled.img`
   max-width: calc(100vmax);
   max-height: calc(100vmax);
   object-fit: cover;
+  opacity: 0.9;
 `
 
 const StyledVideo = styled.video`

@@ -211,22 +211,22 @@ export default class App extends React.Component {
       }
     })
 
-    window.addEventListener('wheel', (e) => {
-      e.preventDefault()
+    // window.addEventListener('wheel', (e) => {
+    //   e.preventDefault()
 
-      if (this.isScrolling) {
-        return
-      }
+    //   if (this.isScrolling) {
+    //     return
+    //   }
 
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && Math.abs(e.deltaY) > scrollTriggerThreshold) {
-        e.deltaY > 0 ? this.down() : this.up()
-      }
+    //   if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && Math.abs(e.deltaY) > scrollTriggerThreshold) {
+    //     e.deltaY > 0 ? this.down() : this.up()
+    //   }
 
-      if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > scrollTriggerThreshold) {
-        e.deltaX > 0 ? this.right() : this.left()
-      }
+    //   if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > scrollTriggerThreshold) {
+    //     e.deltaX > 0 ? this.right() : this.left()
+    //   }
 
-    }, { passive: false })
+    // }, { passive: false })
 
     window.addEventListener('touchstart', (e) => {
       touchStartX = e.touches[0].clientX
