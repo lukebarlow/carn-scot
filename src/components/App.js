@@ -29,7 +29,7 @@ const Info = styled.div`
   padding-top: 100px;
   padding-left: 150px;
   padding-right: 150px;
-  visibility: ${({visible}) => visible ? 'visible' : 'hidden'}
+  visibility: ${({hidden}) => hidden ? 'hidden' : 'visible'}
 
   @media ${smallScreenSelector} {
     padding-left: 20px;
@@ -336,11 +336,11 @@ export default class App extends React.Component {
 
   render () {
     const { projects, info } = this.props
-    const { projectIndex, pieceIndex, captionPieceIndex, showInfo } = this.state
+    const { projectIndex, pieceIndex, showInfo } = this.state
 
-    const onMove = (by) => {
-      by === -1 ? this.left() : this.right()
-    }
+    // const onMove = (by) => {
+    //   by === -1 ? this.left() : this.right()
+    // }
 
     return <>
 
@@ -371,15 +371,11 @@ export default class App extends React.Component {
           onImageLoad={this.handleImageLoad}
         />)}
       </ProjectContainer>
-      {/* <Caption 
-        onMove={onMove} 
-        index={captionPieceIndex} 
-        count={pieces.length} 
-        piece={piece} 
-      /> */}
-      <Info visible={showInfo}>
+
+      <Info hidden={!showInfo}>
         <MediaQuery minWidth={768}>
           <img
+            alt="technical drawing of Chimenea"
             style={{float: 'right', paddingTop: '65px', margin: '15px'}} 
             src={transformCloudinaryUrl('https://res.cloudinary.com/ekuwol/image/upload/v1560526569/chimenea/isometric_gte9i6.jpg', 350)} />
         

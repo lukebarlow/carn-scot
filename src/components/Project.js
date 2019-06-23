@@ -2,7 +2,6 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 
-import { smallScreenSelector } from '../mediaSelectors'
 import fileType from '../common/fileType.js'
 import Piece from './Piece.js'
 

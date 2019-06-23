@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 const Bar = styled.div`
   position: absolute;
   top: 20px;
@@ -27,21 +28,17 @@ const InfoSpan = styled.span`
   display: block;
   color: ${({ isWhite }) => isWhite ? 'white': 'black'};
   text-decoration: ${({ selected }) => selected ? 'underline' : 'inherit'};
-
   :hover {
     text-decoration: underline;
   }
-
 `
 
-export default ({projects, showHome, onLink, isWhite, selected}) => {
+export default ({ onLink, isWhite, selected }) => {
   return <>
-    {/* <Bar isWhite={isWhite}>
-      { projects.map((p, i) => <NavSpan onClick={() => onLink(i)} key={i} selected={parseInt(selected)===i} project={p}>{p.title}</NavSpan>)}
-    </Bar> */}
     <Bar isWhite={isWhite}>
       <NavSpan onClick={() => onLink(0)}>
-        <img 
+        <img
+          alt="Carn logo" 
           src={ isWhite ? 'img/carn-logo.gif' : 'img/carn-logo-black.gif'} 
           height='40' 
           style={{position: 'relative', top: '-10px'}} 
