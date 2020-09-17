@@ -1,0 +1,3 @@
+- do a simple query which gets the content from the graphql
+  and inserts it into the page
+- 

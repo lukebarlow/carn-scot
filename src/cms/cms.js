@@ -1,9 +1,8 @@
 import CMS from 'netlify-cms'
 
-import ProjectPagePreview from './preview-templates/ProjectPagePreview.js'
-import { ListOfPiecesControl, ListOfPiecesPreview } from './widgets/ListOfPieces.js'
-import { MediaControl, MediaPreview } from './widgets/Media.js'
+import SectionsPreview from './preview-templates/SectionsPreview'
 
-CMS.registerPreviewTemplate('projects', ProjectPagePreview)
-CMS.registerWidget('listOfPieces', ListOfPiecesControl, ListOfPiecesPreview)
-CMS.registerWidget('media', MediaControl, MediaPreview)
+CMS.registerPreviewTemplate('gallery', SectionsPreview)
+CMS.registerPreviewTemplate('info', SectionsPreview)
+CMS.registerPreviewTemplate('cook', SectionsPreview)
+CMS.registerPreviewTemplate('build', SectionsPreview)

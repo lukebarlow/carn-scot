@@ -1,56 +1,35 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+// import React from 'react'
 
-import App from '../components/App.js'
+import Default, { query } from './gallery'
 
-export default class IndexPage extends React.Component {
-  render () {
-    const { data } = this.props
-    const projects = data.projects.edges[0].node.frontmatter.projects
-    const info = data.infoPage.edges[0].node.body
-    return <App projects={projects} info={info} />
-  }
-}
+export default Default
+export { query }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+// import { graphql } from 'gatsby'
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    projects: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "projects-page" } }}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            projects {
-              title
-              cover,
-              pieces {
-                title,
-                media
-              }
-            }
-          }
-        }
-      }
-    }
-    infoPage: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "info-page" } }}
-    ) {
-      edges {
-        node {
-          id
-          body: rawMarkdownBody
-        }
-      }
-    }
-  }
-`
+// import Navigation from '../components/Navigation'
+// export default ({ data }) => {
+//   data = data.allMarkdownRemark.nodes[0]
+//   return (
+//     <div>
+//       <Navigation />
+//       <div style={{paddingTop: 40}} dangerouslySetInnerHTML={{__html: data.html}} />
+//     </div>
+//   )
+// }
+
+// export const query = graphql`
+//   query IndexPageQuery {
+//     allMarkdownRemark(
+//       filter: {
+//         fileAbsolutePath: {regex: "/info.md/"  }}
+//     ) {
+//       nodes {
+//         frontmatter {
+//           title
+//         },
+//         html
+//       }
+//     }
+//   }
+// `

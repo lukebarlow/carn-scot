@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Navigation from '../components/Navigation'
+
 export default () => {
-  return <div>THIS IS THE 3d PAGE</div>
+  return <div><Navigation />THIS IS THE 3d PAGE</div>
 }
