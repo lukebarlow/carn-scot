@@ -3,13 +3,12 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
+  // console.log('the create pages bit does nothing right now')
+  // console.log('actions', actions)
+  // return
 
-
-  console.log('the create pages bit does nothing right now')
-  return
-
-//   const { createPage } = actions
+const { createPage } = actions
 
 //   return graphql(`
 //     {
@@ -28,6 +27,10 @@ exports.createPages = ({ actions, graphql }) => {
 //       }
 //     }
 //   `).then(result => {
+
+
+
+
 
 //     console.log('the list of')
 

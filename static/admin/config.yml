@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -11,37 +13,81 @@ media_library:
     cloud_name: ekuwol
     api_key: 416452294223717
 
-collections:
-            
+collections:     
   - name: "pages"
     label: "Pages"
     files:
-
-      - file: "src/pages/info/index.md"
+      - file: "src/pages/gallery.md"
+        label: "Gallery"
+        name: "gallery"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/info.md"
         label: "Info"
         name: "info"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Body", name: "body", widget: "markdown"}
-
-      - file: "src/pages/projects/index.md"
-        label: "Projects"
-        name: "projects"
+      - file: "src/pages/3d.md"
+        label: "3D"
+        name: "3d"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page"}
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Cover", name: "cover", widget: "media"}
-              - {label: "Poster (image for video)", name: "poster", widget: "media", required: false}
-              - label: "Pieces"
-                name: "pieces"
-                widget: "listOfPieces"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Media", name: "media", widget: "media"}
-                  - {label: "Poster (image for video or audio)", name: "poster", widget: "media", required: false}
-                  - {label: "Description", name: "description", widget: "markdown", required: false}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "3d-page"}
+      - file: "src/pages/cook.md"
+        label: "Cook"
+        name: "cook"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "cook-page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/build.md"
+        label: "Build"
+        name: "build"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "build-page"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      
+      
+      # - file: "src/pages/projects/index.md"
+      #   label: "Gallery"
+      #   name: "gallery"
+      #   fields:
+      #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page"}
+      #     - label: "Projects"
+      #       name: "projects"
+      #       widget: "list"
+      #       fields:
+      #         - {label: "Title", name: "title", widget: "string"}
+      #         - {label: "Cover", name: "cover", widget: "media"}
+      #         - {label: "Poster (image for video)", name: "poster", widget: "media", required: false}
+      #         - label: "Pieces"
+      #           name: "pieces"
+      #           widget: "listOfPieces"
+      #           fields:
+      #             - {label: "Title", name: "title", widget: "string"}
+      #             - {label: "Media", name: "media", widget: "media"}
+      #             - {label: "Poster (image for video or audio)", name: "poster", widget: "media", required: false}
+      #             - {label: "Description", name: "description", widget: "markdown", required: false}
+
+      # - file: "src/pages/projects/index.md"
+      #   label: "Gallery"
+      #   name: "gallery"
+      #   fields:
+      #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page"}
+      #     - label: "Projects"
+      #       name: "projects"
+      #       widget: "list"
+      #       fields:
+      #         - {label: "Title", name: "title", widget: "string"}
+      #         - {label: "Cover", name: "cover", widget: "media"}
+      #         - {label: "Poster (image for video)", name: "poster", widget: "media", required: false}
+      #         - label: "Pieces"
+      #           name: "pieces"
+      #           widget: "listOfPieces"
+      #           fields:
+      #             - {label: "Title", name: "title", widget: "string"}
+      #             - {label: "Media", name: "media", widget: "media"}
+      #             - {label: "Poster (image for video or audio)", name: "poster", widget: "media", required: false}
+      #             - {label: "Description", name: "description", widget: "markdown", required: false}
       
