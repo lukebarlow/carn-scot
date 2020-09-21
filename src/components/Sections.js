@@ -1,4 +1,3 @@
-// import { camelCase } from 'lodash'
 import React from 'react'
 import Markdown from 'react-markdown'
 
