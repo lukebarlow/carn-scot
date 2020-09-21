@@ -29,11 +29,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   ))
 
-  console.log('pages is', JSON.stringify(pages, null, 2))
-
   results.data.allMarkdownRemark.nodes.forEach(node => {
-    console.log('sections', node.frontmatter.sections)
-
     createPage({
       path: `/${node.frontmatter.title.toLowerCase()}/`,
       component: require.resolve('./src/templates/page-with-sections.js'),
