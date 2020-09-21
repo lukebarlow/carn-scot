@@ -7,6 +7,8 @@ export default ({ sections }) => {
     flexDirection: 'row'
   }
 
+  sections = sections || []
+
   return (
     <div style={containerStyle}>
       {sections.map((section, i) => {
