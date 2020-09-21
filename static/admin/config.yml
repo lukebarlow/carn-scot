@@ -13,89 +13,163 @@ media_library:
     cloud_name: ekuwol
     api_key: 416452294223717
 
-collections:     
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/gallery.md"
-        label: "Gallery"
-        name: "gallery"
-        fields:
-          - label: Sections
-            name: sections
-            widget: list
-            types:
-              - label: Image
-                name: image
-                widget: object
-                fields:
-                  - {label: Image, name: image, widget: image}
-                  - {label: Description, name: description, widget: string, required: false}
-              - label: Text
-                name: text
-                widget: object
-                fields:
-                  - {label: Text, name: text, widget: markdown }
-      - file: "src/pages/info.md"
-        label: "Info"
-        name: "info"
-        fields:
-          - label: Sections
-            name: sections
-            widget: list
-            types:
-              - label: Image
-                name: image
-                widget: object
-                fields:
-                  - {label: Image, name: image, widget: image}
-                  - {label: Description, name: description, widget: string, required: false}
-              - label: Text
-                name: text
-                widget: object
-                fields:
-                  - {label: Text, name: text, widget: markdown}
-      - file: "src/pages/3d.md"
-        label: "3D"
-        name: "3d"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "3d-page"}
-      - file: "src/pages/cook.md"
-        label: "Cook"
-        name: cook
-        fields:
-          - label: Sections
-            name: sections
-            widget: list
-            types:
-              - label: Image
-                name: image
-                widget: object
-                fields:
-                  - {label: Image, name: image, widget: image}
-                  - {label: Description, name: description, widget: string, required: false}
-              - label: Text
-                name: text
-                widget: object
-                fields:
-                  - {label: Text, name: text, widget: markdown}
+collections:
 
-      - file: "src/pages/build.md"
-        label: "Build"
-        name: "build"
+  # - name: page-order
+  #   label: Page Order
+  #   files:
+  #     - file: "src/pages/page-order.md"
+  #       label: "Page Order File"
+  #       name: "page-order-file"
+  #       fields:
+  #         - label: Featured Posts
+  #           name: featured
+  #           widget: ncw-reorder
+  #           collection: page
+  #           id_field: title
+  #           display_template: '{{title}}'
+
+  - name: page
+    label: Page
+    folder: "src/pages/section-pages"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: [order]
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Order
+        name: order
+        widget: number
+      - label: Sections
+        name: sections
+        widget: list
+        types:
+          - label: Image
+            name: image
+            widget: object
+            fields:
+              - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
+              - {label: Image, name: image, widget: image}
+              - {label: Description, name: description, widget: string, required: false}
+          - label: Text
+            name: text
+            widget: object
+            fields:
+              - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
+              - {label: Text, name: text, widget: markdown }
+          - label: Special
+            name: special
+            widget: object
+            fields:
+              - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
+              - label: Section
+                name: specialSection
+                widget: select
+                options: ["price-list", "bench"]
+                # collection: "special-sections"
+                # value_field: name
+                # search_fields: [name]
+  
+  - name: "special-section"
+    label: "Special Sections"
+    files:
+      - file: "src/sections/price-list.md"
+        label: "Price List"
+        name: "price-list"
         fields:
-          - label: Sections
-            name: sections
-            widget: list
-            types:
-              - label: Image
-                name: image
-                widget: object
-                fields:
-                  - {label: Image, name: image, widget: image}
-                  - {label: Description, name: description, widget: string, required: false}
-              - label: Text
-                name: text
-                widget: object
-                fields:
-                  - {label: Text, name: text, widget: markdown}
+          - {label: Title, name: title, widget: string }
+          - {label: Text, name: text, widget: markdown }
+      - file: "src/sections/bench.md"
+        label: "Bench"
+        name: "bench"
+        fields:
+          - {label: Title, name: title, widget: string }
+          - {label: Text, name: text, widget: markdown }
+
+  # - name: "old-pages"
+  #   label: "Old Pages"
+  #   files:
+  #     - file: "src/pages/gallery.md"
+  #       label: "Gallery"
+  #       name: "gallery"
+  #       fields:
+  #         - label: Sections
+  #           name: sections
+  #           widget: list
+  #           types:
+  #             - label: Image
+  #               name: image
+  #               widget: object
+  #               fields:
+  #                 - {label: Image, name: image, widget: image}
+  #                 - {label: Description, name: description, widget: string, required: false}
+  #             - label: Text
+  #               name: text
+  #               widget: object
+  #               fields:
+  #                 - {label: Text, name: text, widget: markdown }
+  #     - file: "src/pages/info.md"
+  #       label: "Info"
+  #       name: "info"
+  #       fields:
+  #         - label: Sections
+  #           name: sections
+  #           widget: list
+  #           types:
+  #             - label: Image
+  #               name: image
+  #               widget: object
+  #               fields:
+  #                 - {label: Image, name: image, widget: image}
+  #                 - {label: Description, name: description, widget: string, required: false}
+  #             - label: Text
+  #               name: text
+  #               widget: object
+  #               fields:
+  #                 - {label: Text, name: text, widget: markdown}
+  #     - file: "src/pages/3d.md"
+  #       label: "3D"
+  #       name: "3d"
+  #       fields:
+  #         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "3d-page"}
+  #     - file: "src/pages/cook.md"
+  #       label: "Cook"
+  #       name: cook
+  #       fields:
+  #         - label: Sections
+  #           name: sections
+  #           widget: list
+  #           types:
+  #             - label: Image
+  #               name: image
+  #               widget: object
+  #               fields:
+  #                 - {label: Image, name: image, widget: image}
+  #                 - {label: Description, name: description, widget: string, required: false}
+  #             - label: Text
+  #               name: text
+  #               widget: object
+  #               fields:
+  #                 - {label: Text, name: text, widget: markdown}
+
+  #     - file: "src/pages/build.md"
+  #       label: "Build"
+  #       name: "build"
+  #       fields:
+  #         - label: Sections
+  #           name: sections
+  #           widget: list
+  #           types:
+  #             - label: Image
+  #               name: image
+  #               widget: object
+  #               fields:
+  #                 - {label: Image, name: image, widget: image}
+  #                 - {label: Description, name: description, widget: string, required: false}
+  #             - label: Text
+  #               name: text
+  #               widget: object
+  #               fields:
+  #                 - {label: Text, name: text, widget: markdown}
