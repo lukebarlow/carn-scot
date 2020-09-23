@@ -4,6 +4,7 @@ order: 4
 sections:
   - type: image
     image: https://res.cloudinary.com/ekuwol/image/upload/v1600367922/chimenea/building/building-1_rbpsbp.jpg
+    fullscreen: true
   - type: image
     image: https://res.cloudinary.com/ekuwol/image/upload/v1600367930/chimenea/building/building-2_v9nfnk.jpg
   - type: image

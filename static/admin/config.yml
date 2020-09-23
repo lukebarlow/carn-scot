@@ -14,21 +14,6 @@ media_library:
     api_key: 416452294223717
 
 collections:
-
-  # - name: page-order
-  #   label: Page Order
-  #   files:
-  #     - file: "src/pages/page-order.md"
-  #       label: "Page Order File"
-  #       name: "page-order-file"
-  #       fields:
-  #         - label: Featured Posts
-  #           name: featured
-  #           widget: ncw-reorder
-  #           collection: page
-  #           id_field: title
-  #           display_template: '{{title}}'
-
   - name: page
     label: Page
     folder: "src/pages/section-pages"
@@ -50,20 +35,20 @@ collections:
             name: image
             widget: object
             fields:
-              - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
+              # - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
               - {label: Image, name: image, widget: image}
               - {label: Description, name: description, widget: string, required: false}
           - label: Text
             name: text
             widget: object
             fields:
-              - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
+              # - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
               - {label: Text, name: text, widget: markdown }
           - label: Special
             name: special
             widget: object
             fields:
-              - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
+              # - {label: Fullscreen, name: fullscreen, widget: boolean, required: false }
               - label: Section
                 name: specialSection
                 widget: select

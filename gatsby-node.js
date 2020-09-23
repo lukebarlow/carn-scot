@@ -19,23 +19,36 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `)
 
+  
   const pages = results.data.allMarkdownRemark.nodes
     .filter(n => n.frontmatter.title)
     .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
-    .map(n => (
+    
+  const pageSummaries = pages.map(n => (
     {
       slug: n.frontmatter.title.toLowerCase(),
       title: n.frontmatter.title
     }
   ))
 
-  results.data.allMarkdownRemark.nodes.forEach(node => {
+  // create the first page as the index page
+  createPage({
+    path: `/`,
+    component: require.resolve('./src/templates/page-with-sections.js'),
+    context: {
+      pages: pageSummaries,
+      sections: pages[0].frontmatter.sections
+    }
+  })
+
+  // then create all the named pages
+  pages.forEach(page => {
     createPage({
-      path: `/${node.frontmatter.title.toLowerCase()}/`,
+      path: `/${page.frontmatter.title.toLowerCase()}`,
       component: require.resolve('./src/templates/page-with-sections.js'),
       context: {
-        pages,
-        sections: node.frontmatter.sections
+        pages: pageSummaries,
+        sections: page.frontmatter.sections
       }
     })
   })
