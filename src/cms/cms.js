@@ -1,9 +1,23 @@
-import CMS from 'netlify-cms'
+import CMS from 'netlify-cms-app'
+import cloudinary from 'netlify-cms-media-library-cloudinary'
 
-import ProjectPagePreview from './preview-templates/ProjectPagePreview.js'
-import { ListOfPiecesControl, ListOfPiecesPreview } from './widgets/ListOfPieces.js'
-import { MediaControl, MediaPreview } from './widgets/Media.js'
+import SectionsPreview from './preview-templates/SectionsPreview'
 
-CMS.registerPreviewTemplate('projects', ProjectPagePreview)
-CMS.registerWidget('listOfPieces', ListOfPiecesControl, ListOfPiecesPreview)
-CMS.registerWidget('media', MediaControl, MediaPreview)
+CMS.registerPreviewStyle('../styles/cms.css')
+
+// import { Widget as IdWidget } from '@ncwidgets/id'
+// import { Widget as ReorderWidget } from '@ncwidgets/reorder'
+// import { Widget as FileRelationWidget } from '@ncwidgets/file-relation'
+
+CMS.registerMediaLibrary(cloudinary)
+
+// CMS.registerWidget(IdWidget)
+// CMS.registerWidget(ReorderWidget)
+// CMS.registerWidget(FileRelationWidget)
+
+CMS.registerPreviewTemplate('page', SectionsPreview)
+
+// CMS.registerPreviewTemplate('gallery', SectionsPreview)
+// CMS.registerPreviewTemplate('info', SectionsPreview)
+// CMS.registerPreviewTemplate('cook', SectionsPreview)
+// CMS.registerPreviewTemplate('build', SectionsPreview)

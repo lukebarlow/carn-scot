@@ -1,94 +1,53 @@
-const _ = require('lodash')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
+  const results = await graphql(`
+    {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            order
+            sections {
+              image
+              title
+              subtitle
+              text
+              type
+            }
+          }
+          fileAbsolutePath
+        }
+      }
+    }
+  `)
 
-exports.createPages = ({ actions, graphql }) => {
+  const pages = results.data.allMarkdownRemark.nodes
+    .filter(n => n.frontmatter.title)
+    .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
 
+  const pageSummaries = pages.map(n => ({
+    slug: n.frontmatter.title.toLowerCase(),
+    title: n.frontmatter.title
+  }))
 
-  console.log('the create pages bit does nothing right now')
-  return
+  // create the first page as the index page
+  createPage({
+    path: '/',
+    component: require.resolve('./src/templates/page-with-sections.js'),
+    context: {
+      pages: pageSummaries,
+      page: pages[0].frontmatter
+    }
+  })
 
-//   const { createPage } = actions
-
-//   return graphql(`
-//     {
-//       allMarkdownRemark(limit: 1000) {
-//         edges {
-//           node {
-//             id
-//             fields {
-//               slug
-//             }
-//             frontmatter {
-//               templateKey
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-
-//     console.log('the list of')
-
-
-//     if (result.errors) {
-//       result.errors.forEach(e => console.error(e.toString()))
-//       return Promise.reject(result.errors)
-//     }
-
-//     const projects = result.data.allMarkdownRemark.edges
-
-//     projects.forEach(edge => {
-//       const id = edge.node.id
-//       createPage({
-//         path: edge.node.fields.slug,
-//         component: path.resolve(
-//           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-//         ),
-//         // additional data can be passed via context
-//         context: {
-//           id,
-//         },
-//       })
-//     })
-
-//     // Tag pages:
-//     // let tags = []
-//     // // Iterate through each post, putting all found tags into `tags`
-//     // posts.forEach(edge => {
-//     //   if (_.get(edge, `node.frontmatter.tags`)) {
-//     //     tags = tags.concat(edge.node.frontmatter.tags)
-//     //   }
-//     // })
-//     // // Eliminate duplicate tags
-//     // tags = _.uniq(tags)
-
-//     // Make tag pages
-//     // tags.forEach(tag => {
-//     //   const tagPath = `/tags/${_.kebabCase(tag)}/`
-
-//     //   createPage({
-//     //     path: tagPath,
-//     //     component: path.resolve(`src/templates/tags.js`),
-//     //     context: {
-//     //       tag,
-//     //     },
-//     //   })
-//     // })
-//   })
-// }
-
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-//   fmImagesToRelative(node) // convert image paths for gatsby images
-
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
+  // then create all the named pages
+  pages.forEach(page => {
+    createPage({
+      path: `/${page.frontmatter.title.toLowerCase()}`,
+      component: require.resolve('./src/templates/page-with-sections.js'),
+      context: {
+        pages: pageSummaries,
+        page: page.frontmatter
+      }
+    })
+  })
 }

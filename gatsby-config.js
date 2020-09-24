@@ -3,8 +3,7 @@ var proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
-    description:
-      'Website for the Carn Smithy in Sutherland, Scotland.',
+    description: 'Website for the Carn Smithy in Sutherland, Scotland.'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -13,22 +12,22 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
+        name: 'uploads'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: 'pages'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/img`,
-        name: 'images',
-      },
+        name: 'images'
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -37,8 +36,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
-              name: 'uploads',
-            },
+              name: 'uploads'
+            }
           },
           {
             resolve: 'gatsby-remark-images',
@@ -46,23 +45,23 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048,
-            },
+              maxWidth: 2048
+            }
           },
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
-      },
+              destinationDir: 'static'
+            }
+          }
+        ]
+      }
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
     },
     // {
     //   resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
@@ -72,7 +71,7 @@ module.exports = {
     //   },
     // }, // must be after other CSS plugins
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    'gatsby-plugin-netlify' // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
@@ -82,9 +81,9 @@ module.exports = {
       proxy({
         target: 'http://localhost:9000',
         pathRewrite: {
-          '/.netlify/functions/': '',
-        },
+          '/.netlify/functions/': ''
+        }
       })
     )
-  },
+  }
 }

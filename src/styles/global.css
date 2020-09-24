@@ -1,0 +1,95 @@
+@font-face {
+  font-family: NotHuman;
+  src: url(NotHuman-Regular.ttf);
+}
+
+@font-face {
+  font-family: Titillium;
+  src: url(TitilliumWeb-Regular.ttf);
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(19, 46, 97);
+  overflow-y: hidden;
+  font-family: Titillium;
+}
+
+a {
+  color: white;
+}
+
+#___gatsby {
+  height: 100vh;
+}
+
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  font-size: 36px;
+  color: white;
+}
+
+.navigation-container {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+}
+
+.navigation-container a {
+  text-decoration: none;
+}
+
+.title {
+  position: absolute;
+  line-height: 0.9;
+  top: -0.1em;
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-size: 64px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.image-container {
+  margin-top: 10vh;
+}
+
+.fullscreen-image-container {
+  position: relative;
+}
+
+.fullscreen-image-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-section {
+  min-width: 400px;
+  padding: 20px;
+  color: white;
+  margin-left: 80px;
+  text-align: justify;
+}
+
+.navigation {
+  position: fixed;
+  top: 50%;
+  color: white;
+  cursor: pointer;
+  font-family: NotHuman;
+  font-size: 50px;
+}
+
+.navigation.left {
+  left: 50px;
+}
+
+.navigation.right {
+  right: 50px;
+}

@@ -1,0 +1,3 @@
+- title and subtitle positioning from the original version please
+- put title text
+- put subtitle text

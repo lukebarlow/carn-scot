@@ -2,46 +2,72 @@ backend:
   name: git-gateway
   branch: master
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
 media_library:
   name: cloudinary
   config:
-    cloud_name: ekuwol
-    api_key: 416452294223717
+    cloud_name: carn-scot
+    api_key: 576598791697792
 
 collections:
-            
-  - name: "pages"
-    label: "Pages"
-    files:
-
-      - file: "src/pages/info/index.md"
-        label: "Info"
-        name: "info"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-page"}
-          - {label: "Body", name: "body", widget: "markdown"}
-
-      - file: "src/pages/projects/index.md"
-        label: "Projects"
-        name: "projects"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page"}
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
+  - name: page
+    label: Page
+    folder: 'src/pages/section-pages'
+    create: true
+    slug: '{{slug}}'
+    sortable_fields: [order]
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Order
+        name: order
+        widget: number
+      - label: Sections
+        name: sections
+        widget: list
+        types:
+          - label: Image
+            name: image
+            widget: object
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Cover", name: "cover", widget: "media"}
-              - {label: "Poster (image for video)", name: "poster", widget: "media", required: false}
-              - label: "Pieces"
-                name: "pieces"
-                widget: "listOfPieces"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Media", name: "media", widget: "media"}
-                  - {label: "Poster (image for video or audio)", name: "poster", widget: "media", required: false}
-                  - {label: "Description", name: "description", widget: "markdown", required: false}
-      
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Subtitle,
+                  name: subtitle,
+                  widget: string,
+                  required: false,
+                }
+          - label: Text
+            name: text
+            widget: object
+            fields:
+              - { label: Text, name: text, widget: markdown }
+          # - label: Special
+          #   name: special
+          #   widget: object
+          #   fields:
+          #     - label: Section
+          #       name: specialSection
+          #       widget: select
+          #       options: ['price-list', 'bench']
+  # - name: 'special-section'
+  #   label: 'Special Sections'
+  #   files:
+  #     - file: 'src/special-sections/price-list.md'
+  #       label: 'Price List'
+  #       name: 'price-list'
+  #       fields:
+  #         - { label: Title, name: title, widget: string }
+  #         - { label: Text, name: text, widget: markdown }
+  #     - file: 'src/special-sections/bench.md'
+  #       label: 'Bench'
+  #       name: 'bench'
+  #       fields:
+  #         - { label: Title, name: title, widget: string }
+  #         - { label: Text, name: text, widget: markdown }
