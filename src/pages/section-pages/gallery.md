@@ -3,27 +3,25 @@ title: Gallery
 order: 1
 sections:
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/gallery/crop2_dhzk1i.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601060699/chimenea/cover.jpg
     fullscreen: true
     title: Carn Kitchen
     subtitle: Outdoor living in style
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave1_ga9adt.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601060866/chimenea/FSwave1_tjkq4c.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/eating_3_sddgcd.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601060906/chimenea/eating_3_h3rqv3.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/detail_2_g210rs.jpg
-    fullscreen: false
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601060909/chimenea/detail_2_nhjdju.jpg
   - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772962/carn.scot%20page%201/with_box_ti7xyj.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526563/chimenea/3304_detail_1_fgmkah.jpg
-    fullscreen: false
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061041/chimenea/3304_detail_1_y1bcau.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526572/chimenea/seat1_joiym5.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061097/chimenea/3444_pizza_1_j7mogi.jpg
     title: seat
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526562/chimenea/3444_pizza_1_owfu0r.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061097/chimenea/3444_pizza_1_j7mogi.jpg
   - type: image
     image: https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030038_ruysiu.jpg
   - type: image
