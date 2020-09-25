@@ -23,13 +23,13 @@ sections:
   - type: image
     image: https://res.cloudinary.com/ekuwol/image/upload/v1601061097/chimenea/3444_pizza_1_j7mogi.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526571/chimenea/P1030038_ruysiu.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061169/chimenea/P1030038_gif3in.jpg
   - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772872/carn.scot%20page%201/pipe_cask_bench_b3smiq.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/FSwave3_cnqmzo.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061200/chimenea/FSwave3_wyskcg.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1560526567/chimenea/P1030012crop_wrvohp.jpg
+    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061234/chimenea/P1030012crop_gnnjie.jpg
   - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772956/carn.scot%20page%201/lampbox_vaowtd.jpg
   - type: image
