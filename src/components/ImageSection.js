@@ -32,7 +32,7 @@ export default ({ width, height, devicePixelRatio, section, i }) => {
       )}
       <img
         key={i}
-        src={transformCloudinaryUrlForHeight(section.image, imageHeight)}
+        src={transformCloudinaryUrlForHeight(section.image, imageHeight, 400)}
         alt={section.description}
         style={imageStyle}
         className={imageClass}
