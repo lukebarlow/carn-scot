@@ -12,7 +12,7 @@ sections:
   - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772676/carn.scot%20page%201/eating_3_y6mbjw.jpg
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1601060909/chimenea/detail_2_nhjdju.jpg
+    image: https://res.cloudinary.com/carn-scot/image/upload/v1601470355/carn.scot%20page%201/D69A3322_fmzm5d.jpg
   - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772962/carn.scot%20page%201/with_box_ti7xyj.jpg
   - type: image
