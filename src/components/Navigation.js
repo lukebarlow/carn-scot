@@ -5,9 +5,11 @@ export default ({ pages, page }) => {
   return (
     <div className='navigation-container'>
       {pages.map(({ slug, title }) => {
-        const linkStyle = {
-          color: 'white',
-          marginLeft: 30
+        const linkStyle = {}
+
+        if (title === page.title) {
+          linkStyle.cursor = 'none'
+          linkStyle.borderBottom = '1pt solid white'
         }
 
         if (title === page.title) {

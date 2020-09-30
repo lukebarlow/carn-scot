@@ -13,6 +13,8 @@ export default ({
   width,
   height,
   devicePixelRatio,
+  isMobile,
+  isPortrait,
   direction = 'horizontal'
 }) => {
   const [sectionIndex, setSectionIndex] = useState(0)
@@ -20,13 +22,18 @@ export default ({
 
   const navigate = useCallback(
     moveBy => {
-      const index = clamp(sectionIndex + moveBy, 0, sections.length)
+      const index = clamp(sectionIndex + moveBy, 0, sections.length - 1)
       const el = main.current.children[index]
-      const offset = el.offsetLeft - (width - el.offsetWidth) / 2
+      let offset = el.offsetLeft - (width - el.offsetWidth) / 2
+
+      if (isMobile) {
+        offset += 5
+      }
+
       scroll.left(document.body, offset)
       setSectionIndex(index)
     },
-    [sectionIndex, sections.length]
+    [width, height, sectionIndex, sections.length]
   )
 
   useEffect(() => {
@@ -67,13 +74,26 @@ export default ({
       <div style={containerStyle} ref={main}>
         {sections.map((section, i) => {
           if (section.type === 'text') {
-            return <TextSection key={i} {...{ width, height, section, i }} />
+            return (
+              <TextSection
+                key={i}
+                {...{ width, height, section, isMobile, isPortrait, i }}
+              />
+            )
           }
           if (section.type === 'image') {
             return (
               <ImageSection
                 key={i}
-                {...{ width, height, devicePixelRatio, section, i }}
+                {...{
+                  width,
+                  height,
+                  devicePixelRatio,
+                  isMobile,
+                  isPortrait,
+                  section,
+                  i
+                }}
               />
             )
           }

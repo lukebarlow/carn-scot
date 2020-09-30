@@ -2,7 +2,7 @@ import React from 'react'
 
 import { transformCloudinaryUrlForHeight } from '../common/transformCloudinaryUrl.js'
 
-export default ({ width, height, devicePixelRatio, section, i }) => {
+export default ({ width, height, devicePixelRatio, isMobile, isPortrait, section, i }) => {
   const containerStyle = section.fullscreen
     ? { width: width, height: height }
     : { height: height * 0.8 }
@@ -12,7 +12,7 @@ export default ({ width, height, devicePixelRatio, section, i }) => {
   const imageClass = section.fullscreen ? 'fullscreen-image-cover' : 'image'
 
   const fullscreenImageStyle = { width, height }
-  const smallerImageStyle = { height: '100%', marginLeft: 80 }
+  const smallerImageStyle = { height: '100%', marginLeft: isMobile ? 10 : 80 }
 
   const imageStyle = section.fullscreen
     ? fullscreenImageStyle

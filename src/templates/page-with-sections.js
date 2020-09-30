@@ -10,7 +10,7 @@ export default ({ pageContext }) => {
   const { pages, page } = pageContext
   const sections = page.sections
 
-  const { width, height, devicePixelRatio, isPortrait } = useSizes()
+  const { width, height, devicePixelRatio, isMobile, isPortrait } = useSizes()
 
   return (
     <>
@@ -33,6 +33,8 @@ export default ({ pageContext }) => {
         sections={sections}
         width={width}
         height={height}
+        isMobile={isMobile}
+        isPortrait={isPortrait}
         devicePixelRatio={devicePixelRatio}
       />
       {!isPortrait && <Logo />}
