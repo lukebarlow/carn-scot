@@ -19,7 +19,7 @@ sections:
 
       You might want to light the fire 45 minutes before you intend to cook. Get a hearty blaze going with well seasoned, clean wood to warm up the oven and create a deep bed of charcoals. You could also add some lumpwood charcoal for a more sustained cooking environment. There should be no flames present when you start cooking, just a nice bed of hot embers.
   - type: image
-    image: https://res.cloudinary.com/ekuwol/image/upload/v1601061400/chimenea/3304_detail_1_rrk1oq.jpg
+    image: https://res.cloudinary.com/carn-scot/image/upload/v1600774047/carn.scot%20page%204/chim_2_detail-thumb_kzlgru.jpg
   - type: text
     text: >-
       Use the Chimenea as you would a normal barbeque grill, closing the door to
