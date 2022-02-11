@@ -8,6 +8,8 @@ sections:
     title: Carn Kitchen
     subtitle: Outdoor living in style
   - type: image
+    image: https://res.cloudinary.com/carn-scot/image/upload/v1644578387/carn.scot%20page%201/Screenshot_434_u8zybw.png
+  - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772799/carn.scot%20page%201/FSwave1_rtktqc.jpg
   - type: image
     image: https://res.cloudinary.com/carn-scot/image/upload/v1600772676/carn.scot%20page%201/eating_3_y6mbjw.jpg
